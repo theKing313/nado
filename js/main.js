@@ -1,15 +1,10 @@
 window.onload = function () {
-
-    // if (document.querySelector('.slider-main__body')) {
-
-    // }
     document.addEventListener('click', documentActions);
-
     function documentActions(e) {
         if (e.target.classList.contains('header__burger')) {
             e.preventDefault();
             const burger = document.querySelector('.header__burger');
-            const menu = document.querySelector('.menu');
+            const menu = document.querySelector('.header__menu');
             const menu__link = document.querySelectorAll('.menu__link');
 
             menu.classList.toggle('_active');
@@ -20,9 +15,10 @@ window.onload = function () {
             document.querySelector('.cookie').classList.add('hide')
             document.querySelector('.cookie').classList.remove('show')
         }
-
-
-
+        if (!e.target.classList.contains('cookie__button')) {
+            document.querySelector('.cookie').classList.add('hide')
+            document.querySelector('.cookie').classList.remove('show')
+        }
     }
 
     window.setInterval(function () {
@@ -45,9 +41,6 @@ window.onload = function () {
     }, 5);
 
 
-    // 
-
-
     const modalTrigger = document.querySelectorAll('.button'),
         modal = document.querySelector('.overlay'),
         cookieEl = document.querySelector('.cookie'),
@@ -61,12 +54,6 @@ window.onload = function () {
                 document.body.style.overflow = 'hidden';
             });
         })
-
-        // setTimeout(() => {
-        //     modal.classList.add('show');
-        //     modal.classList.remove('hide');
-        //     document.body.style.overflow = 'hidden';
-        // }, 800);
 
     }
     function cookieShow(cookieEl) {
@@ -93,23 +80,7 @@ window.onload = function () {
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*Обрарботка Формы на сайте*/
+    /*Обрарботка Формы */
     //forms
     const forms = document.querySelectorAll('form');
     const message = {
@@ -122,9 +93,7 @@ window.onload = function () {
     })
     async function postData(form) {
 
-        form.addEventListener('submit', (event) => {// навешиваем соб на все формы submit- при отправки
-
-
+        form.addEventListener('submit', (event) => {
             let error = 0;
             event.preventDefault();
 
@@ -207,9 +176,6 @@ window.onload = function () {
         const prevModalDialog = document.querySelector('.signup-form');
         prevModalDialog.classList.add('hide');
         prevModalDialog.classList.remove('show');
-        // console.log(prevModalDialog)
-        // prevModalDialog.remove()
-        // 
         const ThanksModal = document.createElement('form');
         ThanksModal.classList.add('signup-form');
         ThanksModal.innerHTML = `
@@ -229,59 +195,9 @@ window.onload = function () {
             document.body.style.overflow = '';
             modal.classList.add('hide');
             modal.classList.remove('show');
-
-
         }, 900000);
 
 
     };
-
-
-
-    // const menu__link_contacts = document.querySelector('.menu__link_contacts'),
-    //     modal_contancts = document.querySelector('.modal-contancts'),
-    //     modalClose_contanct = document.querySelector('[modalClose_contanct]');
-
-    // function showModalContacts() {
-    //     menu__link_contacts.addEventListener('click', (element) => {
-    //         element.preventDefault();
-
-    //         modal_contancts.classList.add('show');
-    //         modal_contancts.classList.remove('hide');
-    //         modalClose_contanct.addEventListener('click', () => {
-    //             // modal.style.display = 'block';
-    //             modal_contancts.classList.add('hide');
-    //             modal_contancts.classList.remove('show');
-    //             // modal.classList.toggle('show');
-    //             document.body.style.overflow = '';
-    //         });
-
-    //     })
-    // }
-    // showModalContacts();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
