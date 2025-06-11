@@ -1,0 +1,37 @@
+{
+  "name": "project_purrweb",
+  "version": "1.0.0",
+  "description": "тестовое purrweb",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theKing313/project_PURRWEB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theKing313/project_PURRWEB/issues"
+  },
+  "homepage": "https://github.com/theKing313/project_PURRWEB#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "style-loader": "^4.0.0"
+  }
+}
