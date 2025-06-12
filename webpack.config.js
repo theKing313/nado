@@ -19,7 +19,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html')
+      filename: 'index.html',
+      template: './public/index.html',
+      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       filename: 'clock.html',

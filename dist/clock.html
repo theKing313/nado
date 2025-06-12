@@ -1,4 +1,24 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Clock</title><script defer="defer" src="clock.bundle.js"></script></head><body><div class="clock"><div class="hand hour" id="hour"></div><div class="hand minute" id="minute"></div><div class="hand second" id="second"></div><div class="center"></div></div><div class="buttons"><button class="startBtn">Старт</button> <button class="pauseBtn">Пауза</button></div><style>body {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+  <script defer src="clock.bundle.js"></script></head>
+  <body>
+    <div class="clock">
+      <div class="hand hour" id="hour"></div>
+      <div class="hand minute" id="minute"></div>
+      <div class="hand second" id="second"></div>
+      <div class="center"></div>
+    </div>
+
+    <div class="buttons">
+      <button class="startBtn">Старт</button>
+      <button class="pauseBtn">Пауза</button>
+    </div>
+    <style>
+      body {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -63,4 +83,8 @@
         padding: 10px 20px;
         font-size: 16px;
         margin: 0 10px;
-      }</style><script></script></body></html>
+      }
+    </style>
+    <script></script>
+  </body>
+</html>
