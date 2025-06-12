@@ -1,16 +1,13 @@
 import './css/main.css';
-// main.js
-// import initBurgerMenu from './modules/burgerMenu';
-// import initParallax from './modules/parallax';
-// import initModal from './modules/modal';
-// import initCookieNotice from './modules/cookie';
-// import initFormHandlers from './modules/form';
 import initBurgerMenu from './js/modules/burgerMenu';
-
+import initCookieNotice from './js/modules/cookie';
+import initFormHandlers from './js/modules/form';
+import initParallax from './js/modules/initParallax';
+import initModal from './js/modules/modal';
 window.onload = function () {
   initBurgerMenu();
-  //   initParallax();
-  //   initModal();
-  //   initCookieNotice();
-  //   initFormHandlers();
+  initParallax();
+  initModal();
+  initFormHandlers();
+  initCookieNotice();
 };

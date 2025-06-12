@@ -888,27 +888,11 @@ body {
   z-index: 100;
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition:
-    opacity 0.5s,
-    z-index 0s 0.5s,
-    -webkit-transform 0.5s;
-  transition:
-    opacity 0.5s,
-    z-index 0s 0.5s,
-    -webkit-transform 0.5s;
-  -o-transition:
-    opacity 0.5s,
-    transform 0.5s,
-    z-index 0s 0.5s;
-  transition:
-    opacity 0.5s,
-    transform 0.5s,
-    z-index 0s 0.5s;
-  transition:
-    opacity 0.5s,
-    transform 0.5s,
-    z-index 0s 0.5s,
-    -webkit-transform 0.5s;
+  -webkit-transition: opacity 0.5s, z-index 0s 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, z-index 0s 0.5s, -webkit-transform 0.5s;
+  -o-transition: opacity 0.5s, transform 0.5s, z-index 0s 0.5s;
+  transition: opacity 0.5s, transform 0.5s, z-index 0s 0.5s;
+  transition: opacity 0.5s, transform 0.5s, z-index 0s 0.5s, -webkit-transform 0.5s;
 }
 
 .overlay .overlay-background {
@@ -1593,4 +1577,7 @@ body {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
   }
+}
+._error {
+  border: 1px solid red !important;
 }

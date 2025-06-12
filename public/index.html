@@ -82,8 +82,10 @@
           </div>
           <div class="main-header__image">
             <picture
-              ><source srcset="img/header.webp" type="image/webp" />
-              <img src="img/header.png" alt="Illustration of influencers and business"
+              ><source srcset="<%= require('../src/img/header.webp') %>" type="image/webp" />
+              <img
+                src="<%= require('../src/img/header.png') %>"
+                alt="Illustration of influencers and business"
             /></picture>
           </div>
         </div>
@@ -431,8 +433,8 @@
           allow us to analyze user behavior in order to constantly improve the website for you.
         </div>
         <div class="cookie__buttons">
-          <button class="cookie__button">Accept</button>
-          <button class="cookie__button">Decline</button>
+          <button class="cookie__button" type="accept">Accept</button>
+          <button class="cookie__button" type="decline">Decline</button>
         </div>
       </div>
     </div>
