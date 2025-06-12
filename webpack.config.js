@@ -7,7 +7,7 @@ module.exports = {
     clock: './src/js/clock.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: 'js/[name].bundle.js',
     assetModuleFilename: 'assets/images/[name][hash][ext][query]',
     path: path.resolve(__dirname, 'dist'),
     clean: true
