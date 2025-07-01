@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -26,8 +26,7 @@
           <div class="header__top top-menu">
             <div class="header__container">
               <div class="top-menu__body">
-                <button class="top-menu__button _active">For Business</button>
-                <button class="top-menu__button">For Customers</button>
+                <button class="top-menu__button _active">AREA RISERVATA</button>
               </div>
             </div>
           </div>
@@ -36,33 +35,45 @@
               <div class="header__contact contact-header">
                 <a href="#" class="contact-header__logo"
                   ><picture
-                    ><source srcset="<%= require('../src/img/logo.svg') %>" type="image/webp" />
+                    ><source srcset="<%= require('../src/img/logo.png') %>" type="image/webp" />
                     <img
-                      src="<%= require('../src/img/logo.svg') %>"
+                      src="<%= require('../src/img/logo.png') %>"
                       alt="Budss company logo" /></picture
                 ></a>
-                <button class="contact-header__button button">Contact sales</button>
                 <div class="header__burger">
                   <span></span>
                 </div>
               </div>
               <nav class="header__menu menu">
-                <button class="menu__button button">Contact sales</button>
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a href="#" class="menu__link">For Business</a>
+                    <a href="#" class="menu__link _active">HOME</a>
+                  </li>
+                  <li class="menu__item" data-spoller>
+                    <a href="#" class="menu__link">AZIENDA</a>
+                    <ul data-spollers class="menu__list_sub sub-menu _spoller-hidden">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">STORIA</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">MM DESIGN</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">DESIGNER</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">CERTIFICAZIONI</a>
+                      </li>
+                    </ul>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">For Customers</a>
+                    <a href="#" class="menu__link">COLLEZIONI</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Privacy Policy</a>
+                    <a href="#" class="menu__link">NEWS</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Terms Of Use - Seller</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Terms of Use - Sellers & Customers</a>
+                    <a href="#" class="menu__link">CONTATTI</a>
                   </li>
                 </ul>
               </nav>
@@ -72,235 +83,65 @@
       </header>
       <main class="main">
         <div class="header__main main-header container">
-          <div class="main-header__body">
-            <h1 class="main-header__title">Everyone is an Influencer</h1>
+          <!-- <div class="main-header__body">
+            <h1 class="main-header__title">Lampadari contemporanei</h1>
             <p class="main-header__text">
-              Budss is a payments as a service and WOM engine dedicated to acquisition and retention
-              of customers to your business.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </p>
-            <button class="main-header__button button">Contact sales</button>
           </div>
           <div class="main-header__image">
             <picture
-              ><source srcset="<%= require('../src/img/header.webp') %>" type="image/webp" />
+              ><source srcset="<%= require('../src/img/header.png') %>" type="image/webp" />
               <img
                 src="<%= require('../src/img/header.png') %>"
                 alt="Illustration of influencers and business"
             /></picture>
+          </div> -->
+
+          <div class="swiper main-header__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="main-header__body">
+                  <h1 class="main-header__title">Lampadari contemporanei</h1>
+                  <p class="main-header__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    dolore
+                  </p>
+                </div>
+                <div class="main-header__image">
+                  <picture>
+                    <source srcset="<%= require('../src/img/header.png') %>" type="image/webp" />
+                    <img src="<%= require('../src/img/header.png') %>" alt="Illustration" />
+                  </picture>
+                </div>
+              </div>
+
+              <!-- слайд 2 -->
+              <div class="swiper-slide">
+                <div class="main-header__body">
+                  <h1 class="main-header__title">Lampadari contemporanei 2</h1>
+                  <p class="main-header__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    dolore
+                  </p>
+                </div>
+                <div class="main-header__image">
+                  <picture>
+                    <source srcset="<%= require('../src/img/header.png') %>" type="image/webp" />
+                    <img src="<%= require('../src/img/header.png') %>" alt="Illustration" />
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Навигация (точки) -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Кнопки -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
-        <section class="about">
-          <div class="about__container">
-            <div class="about__title">About Budss</div>
-            <div class="about__items">
-              <div class="about__item">
-                <div class="item-about__label">
-                  <p>Payment as a service, powered seamlessly by our network of shoppers</p>
-                </div>
-                <div class="item-about__img">
-                  <picture
-                    ><source
-                      srcset="<%= require('../src/img/about/about_main.webp') %>"
-                      type="image/webp" />
-                    <img src="<%= require('../src/img/about/about_main.png') %>" alt=""
-                  /></picture>
-                </div>
-              </div>
-              <div class="about__item">
-                <div class="item-about__items">
-                  <div class="item-about__item item-about">
-                    <div class="item-about__image">
-                      <picture
-                        ><source
-                          srcset="<%= require('../src/img/about/items/01.svg') %>"
-                          type="image/webp" />
-                        <img src="<%= require('../src/img/about/items/01.svg') %>" alt=""
-                      /></picture>
-                    </div>
-                    <div class="item-about__title">Contactless</div>
-                    <div class="item-about__text">
-                      Budss uses near field communication (NFC) for making contactless payments.
-                    </div>
-                  </div>
-                  <div class="item-about__item item-about">
-                    <div class="item-about__image">
-                      <picture
-                        ><source
-                          srcset="<%= require('../src/img/about/items/02.svg') %>"
-                          type="image/webp" />
-                        <img src="<%= require('../src/img/about/items/02.svg') %>" alt=""
-                      /></picture>
-                    </div>
-                    <div class="item-about__title">Contactless</div>
-                    <div class="item-about__text">
-                      Budss uses near field communication (NFC) for making contactless payments.
-                    </div>
-                  </div>
-                  <div class="item-about__item item-about">
-                    <div class="item-about__image">
-                      <picture
-                        ><source
-                          srcset="<%= require('../src/img/about/items/03.svg') %>"
-                          type="image/webp" />
-                        <img src="<%= require('../src/img/about/items/03.svg') %>" alt=""
-                      /></picture>
-                    </div>
-                    <div class="item-about__title">Contactless</div>
-                    <div class="item-about__text">
-                      Budss uses near field communication (NFC) for making contactless payments.
-                    </div>
-                  </div>
-                  <div class="item-about__item item-about">
-                    <div class="item-about__image">
-                      <picture
-                        ><source
-                          srcset="<%= require('../src/img/about/items/04.svg') %>"
-                          type="image/webp" />
-                        <img src="<%= require('../src/img/about/items/04.svg') %>" alt=""
-                      /></picture>
-                    </div>
-                    <div class="item-about__title">Contactless</div>
-                    <div class="item-about__text">
-                      Budss uses near field communication (NFC) for making contactless payments.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="work">
-          <div class="work__images">
-            <div class="work__image work_img1">
-              <!-- <picture><source srcset="<%= require('../src/img/work/01.webp') %>" type="image/webp"><img src="<%= require('../src/img/work/01.png') %>" alt=""></picture> -->
-            </div>
-            <div class="work__image work_img2"></div>
-            <div class="work__image work_img3"></div>
-          </div>
-          <div class="work__container">
-            <div class="work__body">
-              <picture
-                ><source srcset="<%= require('../src/img/work/work.webp') %>" type="image/webp" />
-                <img src="<%= require('../src/img/work/work.png') %>" alt=""
-              /></picture>
-            </div>
-          </div>
-        </section>
-        <section class="info">
-          <div class="info__container">
-            <div class="info__items">
-              <div class="info__item item-info">
-                <div class="item-info__title">15%</div>
-                <div class="item-info__text">Increase in Purchase Amount</div>
-              </div>
-              <div class="info__item">
-                <div class="item-info__title">30%</div>
-                <div class="item-info__text">Growth in Annual Sales</div>
-              </div>
-              <div class="info__item">
-                <div class="item-info__title">10%</div>
-                <div class="item-info__text">Growth in New Customers</div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="why">
-          <div class="why__container">
-            <div class="why__body">
-              <div class="why__title">Why Budss</div>
-              <div class="why__text">
-                We Provide Advanced Payment Solutions To Grow Your Business
-              </div>
-            </div>
-            <div class="why__items">
-              <div class="why__item">
-                <picture
-                  ><source srcset="<%= require('../src/img/why/item1.webp') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/why/item1.png') %>" alt=""
-                /></picture>
-              </div>
-              <div class="why__item">
-                <picture
-                  ><source srcset="<%= require('../src/img/why/item2.webp') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/why/item2.png') %>" alt=""
-                /></picture>
-              </div>
-              <div class="why__item">
-                <picture
-                  ><source srcset="<%= require('../src/img/why/item3.webp') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/why/item3.png') %>" alt=""
-                /></picture>
-              </div>
-              <div class="why__item">
-                <picture
-                  ><source srcset="<%= require('../src/img/why/item4.webp') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/why/item4.png') %>" alt=""
-                /></picture>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="grow">
-          <div class="grow__container">
-            <div class="grow__body">
-              <div class="grow__title">Let Your Business Grow</div>
-              <button class="grow__button button">Contact sales</button>
-            </div>
-          </div>
-        </section>
-        <section class="brand">
-          <div class="brand__container">
-            <div class="brand__body">
-              <div class="brand__items">
-                <div class="brand__title">Your Brand Awareness Maters</div>
-                <div class="brand__text">
-                  Budss is a husle free solution to put your brand on any digital surface including
-                  Instagram, Facebook, Twitter and TikTok
-                </div>
-              </div>
-              <div class="brand__images">
-                <picture
-                  ><source
-                    srcset="<%= require('../src/img/brand/brand.webp') %>"
-                    type="image/webp" />
-                  <img src="<%= require('../src/img/brand/brand.png') %>" alt=""
-                /></picture>
-              </div>
-            </div>
-            <div class="brand__imgs">
-              <div class="brand__img">
-                <picture
-                  ><source srcset="<%= require('../src/img/brand/05.svg') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/brand/05.svg') %>" alt=""
-                /></picture>
-              </div>
-              <div class="brand__img">
-                <picture
-                  ><source srcset="<%= require('../src/img/brand/02.svg') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/brand/02.svg') %>" alt=""
-                /></picture>
-              </div>
-              <div class="brand__img">
-                <picture
-                  ><source srcset="<%= require('../src/img/brand/03.svg') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/brand/03.svg') %>" alt=""
-                /></picture>
-              </div>
-              <div class="brand__img">
-                <picture
-                  ><source srcset="<%= require('../src/img/brand/04.svg') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/brand/04.svg') %>" alt=""
-                /></picture>
-              </div>
-              <div class="brand__img">
-                <picture
-                  ><source srcset="<%= require('../src/img/brand/01.svg') %>" type="image/webp" />
-                  <img src="<%= require('../src/img/brand/01.svg') %>" alt=""
-                /></picture>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <footer class="footer">
         <div class="footer__container">

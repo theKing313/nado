@@ -1,7 +1,7 @@
 :root {
   --primary-color: #000;
-  --grayscale-01: #181818;
-  --secondary-02: #ffaa4c;
+  --grayscale-01: #333333;
+  --secondary-02: #cccc99;
   --primary-01: #954ced;
   --primary-02: #a64ced;
   --grayscale-07: #fff;
@@ -12,5 +12,5 @@
   --grayscale-20: #f1f1f1;
   --grayscale-30: #a7a7a7;
   --grayscale-02: #444;
-  --font-main: 'Outfit', sans-serif;
+  --font-main: 'Open Sans';
 }
