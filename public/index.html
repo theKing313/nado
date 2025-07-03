@@ -26,7 +26,9 @@
           <div class="header__top top-menu">
             <div class="header__container">
               <div class="top-menu__body">
-                <button class="top-menu__button _active">AREA RISERVATA</button>
+                <button class="top-menu__button _active">
+                  <span>AREA RISERVATA</span><i class="fa-solid fa-lock"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -43,61 +45,46 @@
                 <div class="header__burger">
                   <span></span>
                 </div>
+                <nav class="header__menu menu">
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <a href="#" class="menu__link _active">HOME</a>
+                    </li>
+                    <li class="menu__item" data-spoller>
+                      <a href="#" class="menu__link">AZIENDA</a>
+                      <ul data-spollers class="menu__list_sub sub-menu _spoller-hidden">
+                        <li class="sub-menu__item">
+                          <a href="#" class="sub-menu__link">STORIA</a>
+                        </li>
+                        <li class="sub-menu__item">
+                          <a href="#" class="sub-menu__link">MM DESIGN</a>
+                        </li>
+                        <li class="sub-menu__item">
+                          <a href="#" class="sub-menu__link">DESIGNER</a>
+                        </li>
+                        <li class="sub-menu__item">
+                          <a href="#" class="sub-menu__link">CERTIFICAZIONI</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link">COLLEZIONI</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link">NEWS</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link">CONTATTI</a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-              <nav class="header__menu menu">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a href="#" class="menu__link _active">HOME</a>
-                  </li>
-                  <li class="menu__item" data-spoller>
-                    <a href="#" class="menu__link">AZIENDA</a>
-                    <ul data-spollers class="menu__list_sub sub-menu _spoller-hidden">
-                      <li class="sub-menu__item">
-                        <a href="#" class="sub-menu__link">STORIA</a>
-                      </li>
-                      <li class="sub-menu__item">
-                        <a href="#" class="sub-menu__link">MM DESIGN</a>
-                      </li>
-                      <li class="sub-menu__item">
-                        <a href="#" class="sub-menu__link">DESIGNER</a>
-                      </li>
-                      <li class="sub-menu__item">
-                        <a href="#" class="sub-menu__link">CERTIFICAZIONI</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">COLLEZIONI</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">NEWS</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">CONTATTI</a>
-                  </li>
-                </ul>
-              </nav>
             </div>
           </div>
         </div>
       </header>
       <main class="main">
         <div class="header__main main-header container">
-          <!-- <div class="main-header__body">
-            <h1 class="main-header__title">Lampadari contemporanei</h1>
-            <p class="main-header__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            </p>
-          </div>
-          <div class="main-header__image">
-            <picture
-              ><source srcset="<%= require('../src/img/header.png') %>" type="image/webp" />
-              <img
-                src="<%= require('../src/img/header.png') %>"
-                alt="Illustration of influencers and business"
-            /></picture>
-          </div> -->
-
           <div class="swiper main-header__slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -133,60 +120,96 @@
                 </div>
               </div>
             </div>
+            <div class="main-header__arrow">
+              <a href="#" class="arrow__image">
+                <img src="<%= require('../src/img/arrow.png') %>" alt="arrow" />
+              </a>
+            </div>
 
-            <!-- Навигация (точки) -->
             <div class="swiper-pagination"></div>
-
-            <!-- Кнопки -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </main>
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__top top-footer">
-            <div class="top-footer__logo">
-              <picture
-                ><source srcset="<%= require('../src/img/logo.svg') %>" type="image/webp" />
-                <img src="<%= require('../src/img/logo.svg') %>" alt=""
-              /></picture>
-            </div>
-            <div class="top-footer__labels">
-              <div class="top-footer__label">For Business</div>
-              <div class="top-footer__label">For Customers</div>
-              <div class="footer__items">
-                <button class="footer__item">Privacy Policy</button>
-                <button class="footer__item">Terms Of Use - Seller</button>
-                <button class="footer__item">Terms of Use - Sellers & Customers</button>
+            <div class="top-footer__items items-footer">
+              <div class="items-footer__item">
+                <div class="items-footer__title">LAMPADARI MADE IN ITALY</div>
+                <div class="items-footer__content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea
+                </div>
               </div>
-            </div>
-            <button class="top-footer__button button">Contact sales</button>
-            <div class="top-footer__items">
-              <div class="top-footer__item">
-                <picture
-                  ><source
-                    srcset="<%= require('../src/img/footer/appstore.svg') %>"
-                    type="image/webp" />
-                  <img src="<%= require('../src/img/footer/appstore.svg') %>" alt=""
-                /></picture>
+              <div class="items-footer__item">
+                <div class="items-footer__title">lampadari artigianali</div>
+                <div class="items-footer__content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea
+                </div>
               </div>
-              <div class="top-footer__item">
-                <picture
-                  ><source
-                    srcset="<%= require('../src/img/footer/googleplay.svg') %>"
-                    type="image/webp" />
-                  <img src="<%= require('../src/img/footer/googleplay.svg') %>" alt=""
-                /></picture>
+              <div class="items-footer__item">
+                <div class="items-footer__title">45 ANNI DI ESPERIENZA</div>
+                <div class="items-footer__content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea
+                </div>
+              </div>
+              <div class="top-footer__info info-block">
+                <h3 class="info-block__title">Newsletter</h3>
+                <form class="info-block__form">
+                  <input class="info-block__input" type="text" placeholder="Nome e Cognome" />
+                  <input class="info-block__input" type="email" placeholder="Email" />
+                  <label class="info-block__checkbox-label">
+                    <input type="checkbox" class="info-block__checkbox" />
+                    Acconsento al trattamento dei dati
+                  </label>
+                  <button class="info-block__button" type="submit">Iscriviti</button>
+                </form>
               </div>
             </div>
           </div>
-          <div class="footer__body">
-            <div class="footer__copy">© Copyright 2023, All Rights Reserved by Budss</div>
-            <div class="footer__items">
-              <button class="footer__item">Privacy Policy</button>
-              <button class="footer__item">Terms Of Use - Seller</button>
-              <button class="footer__item">Terms of Use - Sellers & Customers</button>
+          <div class="footer__bottom bottom-footer">
+            <div class="bottom-footer__info">
+              <span class="bottom-footer__company">MMLAMPADARI srl</span>
+              <span class="bottom-footer__address">Via Feltrina 00</span>
+              <span class="bottom-footer__city">31111 Pederobba (TV)</span>
+              <span class="bottom-footer__phone">0423.123456</span>
+              <span class="bottom-footer__email">info@mmlampadari.mm</span>
+              <span class="bottom-footer__vat">P.IVA 04123456789</span>
+            </div>
+
+            <div class="bottom-footer__socials">
+              <a href="#" class="bottom-footer__icon bottom-footer__icon--fb" aria-label="Facebook">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="bottom-footer__icon bottom-footer__icon--insta"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="bottom-footer__icon bottom-footer__icon--pinterest"
+                aria-label="Pinterest"
+              >
+                <i class="fa-brands fa-pinterest-p"></i
+              ></a>
+            </div>
+
+            <div class="bottom-footer__languages">
+              <a href="#" class="bottom-footer__lang">ITA</a>
+              <span class="bottom-footer__divider">|</span>
+              <a href="#" class="bottom-footer__lang">ENG</a>
+              <span class="bottom-footer__divider">|</span>
+              <a href="#" class="bottom-footer__lang">DEU</a>
+              <span class="bottom-footer__divider">|</span>
+              <a href="#" class="bottom-footer__lang">РУС</a>
             </div>
           </div>
         </div>
@@ -279,6 +302,7 @@
         </div>
       </div>
     </div>
+    <script src="https://kit.fontawesome.com/820afdbd58.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

@@ -14,19 +14,18 @@ window.onload = function () {
   initCookieNotice();
 
   const swiper = new Swiper('.main-header__slider', {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
+    loop: false,
+
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
+    autoHeight: true, // 👈 это важно
+    navigation: {},
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev'
+    // },
     effect: 'fade',
     speed: 800
   });
