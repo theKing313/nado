@@ -22,11 +22,7 @@ module.exports = {
       template: './public/index.html',
       chunks: ['main']
     }),
-    new HtmlWebpackPlugin({
-      filename: 'clock.html',
-      template: './public/clock.html',
-      chunks: ['clock']
-    }),
+
     new webpack.ProgressPlugin()
   ],
 
