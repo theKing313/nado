@@ -1,10 +1,9 @@
 export default function initModal() {
   const triggers = document.querySelectorAll('.button');
-  const modal = document.querySelector('.overlay');
-  const closeBtn = document.querySelector('.overlay-close');
+  const modal = document.querySelector('.auth-modal');
+  const closeBtn = document.querySelector('[aria-label=close]');
 
   if (!modal) return;
-
   triggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       modal.classList.add('show');

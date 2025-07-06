@@ -3,8 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 module.exports = {
   entry: {
-    main: './src/index.js',
-    clock: './src/js/clock.js'
+    main: './src/index.js'
   },
   output: {
     filename: 'js/[name].bundle.js',

@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
   <script defer src="js/main.bundle.js"></script></head>
@@ -26,7 +26,9 @@
           <div class="header__top top-menu">
             <div class="header__container">
               <div class="top-menu__body">
-                <button class="top-menu__button _active">AREA RISERVATA</button>
+                <button class="top-menu__button _active button">
+                  <span>AREA RISERVATA</span><i class="fa-solid fa-lock"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -43,198 +45,245 @@
                 <div class="header__burger">
                   <span></span>
                 </div>
+                <nav class="header__menu menu">
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <a href="#" class="menu__link _active">HOME</a>
+                    </li>
+                    <li class="menu__item" data-spoller>
+                      <a href="#" class="menu__link">AZIENDA</a>
+                      <ul data-spollers class="menu__list_sub sub-menu _spoller-hidden">
+                        <li class="sub-menu__item">
+                          <a href="#" class="sub-menu__link">STORIA</a>
+                        </li>
+                        <li class="sub-menu__item">
+                          <a href="#" class="sub-menu__link">MM DESIGN</a>
+                        </li>
+                        <li class="sub-menu__item">
+                          <a href="#" class="sub-menu__link">DESIGNER</a>
+                        </li>
+                        <li class="sub-menu__item">
+                          <a href="#" class="sub-menu__link">CERTIFICAZIONI</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link">COLLEZIONI</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link">NEWS</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link">CONTATTI</a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-              <nav class="header__menu menu">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a href="#" class="menu__link _active">HOME</a>
-                  </li>
-                  <li class="menu__item" data-spoller>
-                    <a href="#" class="menu__link">AZIENDA</a>
-                    <ul data-spollers class="menu__list_sub sub-menu _spoller-hidden">
-                      <li class="sub-menu__item">
-                        <a href="#" class="sub-menu__link">STORIA</a>
-                      </li>
-                      <li class="sub-menu__item">
-                        <a href="#" class="sub-menu__link">MM DESIGN</a>
-                      </li>
-                      <li class="sub-menu__item">
-                        <a href="#" class="sub-menu__link">DESIGNER</a>
-                      </li>
-                      <li class="sub-menu__item">
-                        <a href="#" class="sub-menu__link">CERTIFICAZIONI</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">COLLEZIONI</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">NEWS</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">CONTATTI</a>
-                  </li>
-                </ul>
-              </nav>
             </div>
           </div>
         </div>
       </header>
       <main class="main">
-        <div class="header__main main-header container">
-          <div class="main-header__body">
-            <h1 class="main-header__title">Lampadari contemporanei</h1>
-            <p class="main-header__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            </p>
+        <section class="header__main main-header container">
+          <div class="swiper main-header__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="main-header__body">
+                  <h1 class="main-header__title">Lampadari contemporanei</h1>
+                  <p class="main-header__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    dolore
+                  </p>
+                </div>
+                <div class="main-header__image">
+                  <picture>
+                    <source srcset="assets/images/headera88a57bfdbeb5299246b.png" type="image/webp" />
+                    <img src="assets/images/headera88a57bfdbeb5299246b.png" alt="Illustration" />
+                  </picture>
+                </div>
+              </div>
+
+              <!-- слайд 2 -->
+              <div class="swiper-slide">
+                <div class="main-header__body">
+                  <h1 class="main-header__title">Lampadari contemporanei 2</h1>
+                  <p class="main-header__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    dolore
+                  </p>
+                </div>
+                <div class="main-header__image">
+                  <picture>
+                    <source srcset="assets/images/headera88a57bfdbeb5299246b.png" type="image/webp" />
+                    <img src="assets/images/headera88a57bfdbeb5299246b.png" alt="Illustration" />
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="main-header__image">
-            <picture
-              ><source srcset="assets/images/headera88a57bfdbeb5299246b.png" type="image/webp" />
-              <img
-                src="assets/images/headera88a57bfdbeb5299246b.png"
-                alt="Illustration of influencers and business"
-            /></picture>
-          </div>
-        </div>
+          <section class="info">
+            <div class="main-header__arrow">
+              <a href="#" class="arrow__image">
+                <img src="assets/images/arrow289ac4a7f36dc2977bce.png" alt="arrow" />
+              </a>
+            </div>
+            <div class="info-cards">
+              <div class="info-cards__container">
+                <div class="info-cards__item info-cards__item--beige">
+                  <h3 class="info-cards__title">Stai pensando ad un progetto?</h3>
+                  <p class="info-cards__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    dolore
+                  </p>
+                  <a href="#" class="info-cards__link">Approfondisci</a>
+                </div>
+
+                <div class="info-cards__item info-cards__item--white">
+                  <h3 class="info-cards__title">Vi aspettiamo alla fiera Euroluce</h3>
+                  <p class="info-cards__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    dolore
+                  </p>
+                  <a href="#" class="info-cards__link">Approfondisci</a>
+                </div>
+
+                <div class="info-cards__item info-cards__item--black">
+                  <h3 class="info-cards__title">Scopri la nuova collezione</h3>
+                  <p class="info-cards__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    dolore
+                  </p>
+                  <a href="#" class="info-cards__link">Approfondisci</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__top top-footer">
-            <div class="top-footer__logo">
-              <picture
-                ><source srcset="assets/images/logo84b6bc33b49bb96e4083.svg" type="image/webp" />
-                <img src="assets/images/logo84b6bc33b49bb96e4083.svg" alt=""
-              /></picture>
-            </div>
-            <div class="top-footer__labels">
-              <div class="top-footer__label">For Business</div>
-              <div class="top-footer__label">For Customers</div>
-              <div class="footer__items">
-                <button class="footer__item">Privacy Policy</button>
-                <button class="footer__item">Terms Of Use - Seller</button>
-                <button class="footer__item">Terms of Use - Sellers & Customers</button>
+            <div class="top-footer__items items-footer">
+              <div class="items-footer__item">
+                <div class="items-footer__title">LAMPADARI MADE IN ITALY</div>
+                <div class="items-footer__content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea
+                </div>
               </div>
-            </div>
-            <button class="top-footer__button button">Contact sales</button>
-            <div class="top-footer__items">
-              <div class="top-footer__item">
-                <picture
-                  ><source
-                    srcset="assets/images/appstore644f0de81b4f310a0ed5.svg"
-                    type="image/webp" />
-                  <img src="assets/images/appstore644f0de81b4f310a0ed5.svg" alt=""
-                /></picture>
+              <div class="items-footer__item">
+                <div class="items-footer__title">lampadari artigianali</div>
+                <div class="items-footer__content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea
+                </div>
               </div>
-              <div class="top-footer__item">
-                <picture
-                  ><source
-                    srcset="assets/images/googleplay9c80f1c334994c4e16cd.svg"
-                    type="image/webp" />
-                  <img src="assets/images/googleplay9c80f1c334994c4e16cd.svg" alt=""
-                /></picture>
+              <div class="items-footer__item">
+                <div class="items-footer__title">45 ANNI DI ESPERIENZA</div>
+                <div class="items-footer__content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea
+                </div>
+              </div>
+              <div class="top-footer__info info-block">
+                <h3 class="info-block__title">Newsletter</h3>
+                <form class="info-block__form">
+                  <input class="info-block__input" type="text" placeholder="Nome e Cognome" />
+                  <input class="info-block__input" type="email" placeholder="Email" />
+                  <label class="info-block__checkbox-label">
+                    <input type="checkbox" class="info-block__checkbox" />
+                    Acconsento al trattamento dei dati
+                  </label>
+                  <button class="info-block__button" type="submit">Iscriviti</button>
+                </form>
               </div>
             </div>
           </div>
-          <div class="footer__body">
-            <div class="footer__copy">© Copyright 2023, All Rights Reserved by Budss</div>
-            <div class="footer__items">
-              <button class="footer__item">Privacy Policy</button>
-              <button class="footer__item">Terms Of Use - Seller</button>
-              <button class="footer__item">Terms of Use - Sellers & Customers</button>
+          <div class="footer__bottom bottom-footer">
+            <div class="bottom-footer__info">
+              <span class="bottom-footer__company">MMLAMPADARI srl</span>
+              <span class="bottom-footer__address">Via Feltrina 00</span>
+              <span class="bottom-footer__city">31111 Pederobba (TV)</span>
+              <span class="bottom-footer__phone">0423.123456</span>
+              <span class="bottom-footer__email">info@mmlampadari.mm</span>
+              <span class="bottom-footer__vat">P.IVA 04123456789</span>
+            </div>
+
+            <div class="bottom-footer__socials">
+              <a href="#" class="bottom-footer__icon bottom-footer__icon--fb" aria-label="Facebook">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="bottom-footer__icon bottom-footer__icon--insta"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="bottom-footer__icon bottom-footer__icon--pinterest"
+                aria-label="Pinterest"
+              >
+                <i class="fa-brands fa-pinterest-p"></i
+              ></a>
+            </div>
+
+            <div class="bottom-footer__languages">
+              <a href="#" class="bottom-footer__lang">ITA</a>
+              <span class="bottom-footer__divider">|</span>
+              <a href="#" class="bottom-footer__lang">ENG</a>
+              <span class="bottom-footer__divider">|</span>
+              <a href="#" class="bottom-footer__lang">DEU</a>
+              <span class="bottom-footer__divider">|</span>
+              <a href="#" class="bottom-footer__lang">РУС</a>
             </div>
           </div>
         </div>
       </footer>
     </div>
-    <div class="overlay hide">
-      <div class="overlay-content" id="overlay-content">
-        <button class="fa fa-times fa-lg overlay-close" id="overlay-close">
-          <picture
-            ><source srcset="assets/images/icon-buttonc3298cfbf19d8857c403.svg" type="image/webp" />
-            <img src="assets/images/icon-buttonc3298cfbf19d8857c403.svg" alt=""
-          /></picture>
-        </button>
-
-        <form class="signup-form" method="post" action="#" novalidate="novalidate">
-          <label for="signup-name">
-            Name
-            <span>*</span></label
-          >
-          <input
-            class="__req name"
-            id="signup-name"
-            type="text"
-            name="name"
-            autocomplete="off"
-            placeholder="Enter your name"
-          />
-          <p class="filed_err hide">This field is required.</p>
-          <label for="signup-email">Email <span>*</span></label>
-          <input
-            class="__req email"
-            id="signup-email"
-            type="email"
-            name="email"
-            autocomplete="off"
-            placeholder="Enter your email"
-          />
-          <p class="filed_err hide">This field is required.</p>
-          <label for="signup-pw"
-            >Phone number
-            <span>*</span>
-          </label>
-
-          <input
-            class="__req"
-            id="signup-phone"
-            type="tel"
-            name="phone"
-            placeholder="Enter your phone number"
-          />
-          <p class="filed_err hide">This field is required.</p>
-          <label for="signup-cpw">Company </label>
-          <input
-            id="signup-cpw"
-            type="password"
-            name="cpw"
-            autocomplete="off"
-            placeholder="Enter your company"
-          />
-
-          <label for="signup-cpw">Website/Store URL</label>
-          <input
-            id="signup-cpw"
-            type="password"
-            name="cpw"
-            autocomplete="off"
-            placeholder="Enter Website/Store URL"
-          />
-
-          <div class="signup-privacy">
-            By submitting this form you are agreeing to Budss’s
-            <a href="#">Privacy Policy</a>
-            and
-            <a href="#">Terms of Use</a>
+    <div class="auth-modal hide">
+      <div class="auth-modal__overlay"></div>
+      <div class="auth-modal__window">
+        <button class="auth-modal__close" aria-label="close">&times;</button>
+        <h2 class="auth-modal__title">Area Riservata</h2>
+        <div class="auth-modal__forms">
+          <div class="auth-modal__column auth-modal__login">
+            <h3 class="auth-modal__subtitle">Accedi</h3>
+            <input type="email" class="auth-modal__input" placeholder="E-mail" />
+            <input type="password" class="auth-modal__input" placeholder="Password" />
+            <button class="auth-modal__button">Accedi</button>
+            <a href="#" class="auth-modal__forgot">Password dimenticata</a>
           </div>
 
-          <button class="btn btn-outline button">Contact sales</button>
-        </form>
+          <div class="auth-modal__column auth-modal__register">
+            <h3 class="auth-modal__subtitle">Registrati</h3>
+            <input type="text" class="auth-modal__input" placeholder="Nome" />
+            <input type="text" class="auth-modal__input" placeholder="Cognome" />
+            <input type="email" class="auth-modal__input" placeholder="E-mail" />
+            <input type="password" class="auth-modal__input" placeholder="Password" />
+
+            <label class="auth-modal__checkbox">
+              <input type="checkbox" />
+              Acconsento al trattamento dei dati
+            </label>
+            <label class="auth-modal__checkbox">
+              <input type="checkbox" />
+              Mi iscrivo alla Newsletter
+            </label>
+
+            <button class="auth-modal__button">Iscriviti</button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="cookie hide">
-      <div class="cookie__body">
-        <div class="cookie__title">
-          This website uses cookies to ensure you get the best experience on our website. They also
-          allow us to analyze user behavior in order to constantly improve the website for you.
-        </div>
-        <div class="cookie__buttons">
-          <button class="cookie__button" type="accept">Accept</button>
-          <button class="cookie__button" type="decline">Decline</button>
-        </div>
-      </div>
-    </div>
+
+    <script src="https://kit.fontawesome.com/820afdbd58.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

@@ -1,22 +1,28 @@
 export default function initParallax() {
-  let x = window.innerWidth;
+  const arrowBtn = document.querySelector('.main-header__arrow');
+  const infoCards = document.querySelector('.info-cards');
 
-  function animate() {
-    const w1 = document.querySelector('.work_img1');
-    const w2 = document.querySelector('.work_img2');
-    const w3 = document.querySelector('.work_img3');
+  if (!arrowBtn) return;
 
-    if (!w1 || !w2 || !w3) return;
+  arrowBtn.addEventListener('click', (event) => {
+    event.preventDefault();
 
-    x--;
-    w1.style.backgroundPositionX = `${x}px`;
-    w2.style.backgroundPositionX = `${x * 0.6}px`;
-    w3.style.backgroundPositionX = `${x * 0.8}px`;
+    arrowBtn.classList.toggle('arrow__active');
+    rotateArrow(arrowBtn);
+    infoCards?.classList.toggle('_info-active');
+  });
 
-    if (x < -window.innerWidth) x = window.innerWidth;
+  function rotateArrow(target) {
+    let angle = 0;
 
-    requestAnimationFrame(animate);
+    function rotateStep() {
+      if (angle === 180) return;
+
+      angle += 20;
+      target.style.transform = `translateX(-50%) rotate(${angle}deg)`;
+      requestAnimationFrame(rotateStep);
+    }
+
+    rotateStep(); // запускаем
   }
-
-  requestAnimationFrame(animate);
 }
